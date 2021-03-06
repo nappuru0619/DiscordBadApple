@@ -2,6 +2,9 @@ from PIL import Image
 import time
 ASCII_CHARS = ["-", "-","-","-","-","-","-","-","-","-", "@"]
 
+bot = commands.Bot(command_prefix='/')
+token = os.environ['DISCORD_BOT_TOKEN']
+
 def resized_gray_image(image ,new_width=70):
 	width,height = image.size
 	aspect_ratio = height/width
@@ -68,8 +71,3 @@ async def badapple(ctx):
 
 
 bot.run(TOKEN)
-
-
-
-
-	
